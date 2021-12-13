@@ -12,6 +12,12 @@ const devConfig = {
   module: {
     rules: [
       {
+        test: /\.(jpe?g|gif|png|webp|bmp|svg)$/i,
+        type: 'asset',
+        // type: 'asset/inline',
+        // type: 'asset/resource',
+      },
+      {
         test: /\.jsx?$/i,
         exclude: /(node_modules|dist)/,
         use: 'babel-loader',

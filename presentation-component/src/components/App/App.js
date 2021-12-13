@@ -1,16 +1,15 @@
 import React from 'react';
-import { Emoji } from '../../components';
+import reactLogoPath from '../../assets/react.svg';
+import emojiPath from '../../assets/emoji/oops.png';
+
+console.log(reactLogoPath);
 
 export default function App({ greetingMessage }) {
   return (
     <div className="app">
+      <img src={reactLogoPath} alt="React" />
+      <img src={emojiPath} alt="Oops" />
       <h1>{greetingMessage}</h1>
-      <Emoji
-        id="emoji-id"
-        aria-label="emoji-label"
-        source="/assets/emoji/oops.png"
-        label="웁스!!"
-      />
     </div>
   );
 }

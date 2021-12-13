@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { App } from './components';
 render(
   <StrictMode>
-    <App greetingMessage={'Presentational Component'} />
+    <App greetingMessage={'Hello React'} />
   </StrictMode>,
   document.getElementById('root')
 );
