@@ -8,6 +8,7 @@ const devConfig = {
   output: {
     path: path.resolve(__root, 'dist'),
     filename: 'js/[name].js',
+    assetModuleFilename: 'assets/[name].[contenthash][ext]',
   },
   module: {
     rules: [
@@ -16,6 +17,12 @@ const devConfig = {
         type: 'asset',
         // type: 'asset/inline',
         // type: 'asset/resource',
+        parser: {
+          dataUrlCondition: {
+            // default 8
+            maxSize: 4 * 1024, // 4kb
+          },
+        },
       },
       {
         test: /\.jsx?$/i,
