@@ -8,7 +8,7 @@ const devConfig = {
   output: {
     path: path.resolve(__root, 'dist'),
     filename: 'js/[name].js',
-    assetModuleFilename: 'assets/[name].[contenthash][ext]',
+    assetModuleFilename: 'assets/[name].[contenthash][ext][query]',
   },
   module: {
     rules: [
