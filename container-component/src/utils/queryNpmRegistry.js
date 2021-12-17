@@ -1,3 +1,5 @@
 export function queryNpmRegistry({ query, size = 5 } = {}) {
-  return fetch(`//registry.npmjs.org/-/v1/search?text=${query}&size=${size}`);
+  return fetch(
+    `https://registry.npmjs.org/-/v1/search?text=${query}&size=${size}`
+  );
 }
